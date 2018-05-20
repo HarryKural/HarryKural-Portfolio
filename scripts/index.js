@@ -148,20 +148,20 @@ $(function() {
 
   setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
 
-    // CONTACT FORM
-    $('#contact-form').submit(function(e) {
-        e.preventDefault();
-
-        $.ajax({
-            url: "https://formspree.io/harrykural@gmail.com",
-            method: "POST",
-            data: { message: $('form').serialize() },
-            dataType: "json"
-        }).done(function(response) {
-            $('#success').addClass('expand');
-            $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
-        });
-    });
+    // // CONTACT FORM
+    // $('#contact-form').submit(function(e) {
+    //     e.preventDefault();
+    //
+    //     $.ajax({
+    //         url: "https://formspree.io/@gmail.com",
+    //         method: "POST",
+    //         data: { message: $('form').serialize() },
+    //         dataType: "json"
+    //     }).done(function(response) {
+    //         $('#success').addClass('expand');
+    //         $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
+    //     });
+    // });
 
   $('#close').click(function() {
     $('#success').removeClass('expand');
